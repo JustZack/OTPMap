@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+        <!-- main style -->
+        <link rel="stylesheet" href="responsive.css">
+
+        <!-- main script -->
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <div id="floors">
+            <div id="PreviousFloor" >
+                <i class="fas fa-angle-left"></i>
+                <div>
+                    <p>Level</p>
+                    <p>100</p>
+                </div>
+            </div>
+            <div id="CurrentFloor">
+                <div>
+                    <img src="https://lsc.colostate.edu/wp-content/uploads/2018/06/LSC-2017-Logo-Green.png">
+                </div>
+                <p>Level 200</p>
+            </div>
+            <div id="NextFloor">
+                <div>
+                    <p>Level</p>
+                    <p>300</p>
+                </div>
+                <i class="fas fa-angle-right"></i>                
+            </div>            
+        </div>
+
+        <div id="compass">
+            <img src="https://lsc.colostate.edu/wp-content/uploads/2018/06/Artboard-2vvcv.png">
+            <span>Tap to Recenter</span>
+        </div>
+
+        <div id="mapcontainer">
+            <img id="currentmap" src="https://lsc.colostate.edu/wp-content/uploads/2018/05/All-flat-maps_V2_separate-2.png">
+            <div id="pins"></div>
+        </div>
+
+        <div id="filters">
+            <p id="Food" data-selected="false" style="background-color: #D9782D">
+                Where to Eat
+            </p>
+            <p id="Restrooms" data-selected="false" style="background-color: #12A4B6">
+                Restrooms
+            </p>
+            <p id="Essentials" data-selected="false" style="background-color: #C8C372">
+                Key Places
+            </p>          
+        </div>
+
+        <div id="infobox">
+            <h1>Test</h1><i class="fas fa-angle-double-down closeinfo"></i>
+            <p>More test</p>
+        </div>
+    </body>
+</html>

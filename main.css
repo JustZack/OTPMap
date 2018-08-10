@@ -1,0 +1,253 @@
+html, body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    touch-action: manipulation;
+
+    position: fixed!important;
+}
+body { 
+    position: relative;
+}
+#floors { 
+    background-color: white;
+
+    height: 15vw;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    font-size: 0;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+
+#floors{
+    background-color: white;
+    color: #1E4D2B;
+    border: 5px solid #C8C372;
+    border-left: none;
+    border-right: none;
+    /*box-sizing: border-box;*/
+}
+
+
+#floors > div{ 
+    top: 0;
+    display: inline-block;
+    height: 100%;
+    line-height: 7.5vw;
+}           
+#floors > div i{
+    display: inline-block;
+    height: 100%;
+    line-height: 16vw;
+    font-size: 17vw;
+} 
+#floors > div div p{
+    margin: 0px;
+    height: 5.5vw;
+    display: block;
+    line-height: 5.5vw;
+    font-size: 4.5vw;
+} 
+
+#floors > div div p:first-child{
+    margin-top: 2.55vw;
+}
+
+#floors div#CurrentFloor { 
+    width: 60%;
+    text-align: center;
+    font-size: 7.5vw;
+    line-height: 15.5vw;
+}    
+#floors div#CurrentFloor p, #floors div#CurrentFloor div{
+    margin: 0;
+    display: inline-block;
+    vertical-align:middle;
+    height: 100%;
+}
+#floors div#CurrentFloor p{
+    margin: 0;
+}
+#floors div#CurrentFloor div img{
+    width: 19vw;
+    margin-top: 2vw;
+}
+#floors div#PreviousFloor, #floors div#NextFloor { 
+    width: 20vw;
+}
+#floors div#PreviousFloor div, #floors div#NextFloor div{ 
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+}
+
+#floors div#PreviousFloor   { text-align: left; float: left;   }   
+#floors div#NextFloor       { text-align: right; float: right; }   
+
+#floors, #filters {
+    z-index: 1;
+}
+
+#compass {
+    width: 0;
+    height: 0;
+}
+
+#compass img{
+    position: absolute;
+    left: 2vw;
+    top: 19vw;
+    height: 19vw;
+    z-index: 1;
+}
+
+#filters { 
+    background-color: white;
+    height: 10%; 
+    width: 100%;    
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    font-size: 0px;
+    color: white;
+    display: table;
+
+    border-top: .75vw solid #1E4D2B;
+}
+#filters p{
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    display: table-cell;
+    font-size: 5vw;
+    width: 33%;
+    text-align: center;
+    margin: 0px;
+    line-height: 10vh;
+    height: 100%;
+
+    text-decoration: #ffffff dotted;
+
+    border-color: #1E4D2B;    
+}
+
+.filter-deselected{
+    background-color: #59595B!important;
+    color: rgba(255,255,255,.6);
+}
+
+#filters p:first-child{
+    border-right-width: .75vw;
+    border-right-style: solid;
+}
+
+#filters p:last-child{
+    border-left-width: .75vw;
+    border-left-style: solid;
+}
+
+#mapcontainer{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
+#mapcontainer img{
+    display: block;
+    margin:auto;
+}
+
+* {
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.map-pin{
+    position: absolute;
+    -webkit-text-stroke: .4vw black;
+    font-size: 7vw;
+
+    -moz-transition: color .2s ease-out;
+    -o-transition: color .2s ease-out;
+    -webkit-transition: color .2s ease-out;
+    transition: color .2s ease-out;
+}
+
+.map-pin-selected{
+    color: red!important;
+}
+
+.map-pin-selected-food{
+    color: #D9782D!important;
+}
+.map-pin-selected-restroom{
+    color: #12A4B6!important;
+}
+.map-pin-selected-essential{
+    color: #C8C372!important;
+}
+
+.map-pin-deselected{
+    -moz-transition: opacity .1s ease-out;
+    -o-transition: opacity .1s ease-out;
+    -webkit-transition: opacity .1s ease-out;
+    transition: opacity .1s ease-out;
+    opacity: 0; 
+    display: none;
+}
+
+#selected-pin{
+    color: black;
+}
+
+#infobox{
+    border-top: .75vw solid #C8C372;
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 2%;
+    top: 100%;
+    background-color: white;
+    
+}
+#infobox h1{
+    color: #1E4D2B;
+    font-size: 9vw;
+    border-bottom: 2px solid #C8C372;
+    display: inline-block;
+    margin:0;
+    max-width: 80%;
+}
+#infobox p{
+    font-size: 5vw;    
+    margin:0;    
+    margin-top: 3vh;
+}
+i.fa-angle-double-down{
+    float: right;
+    font-size: 10vw;
+    width: 20%;
+    text-align: right;
+}
